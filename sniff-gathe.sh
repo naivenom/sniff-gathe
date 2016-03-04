@@ -63,21 +63,23 @@ tput sgr0;
     echo "5) Mostrar opciones"
     echo "6) MITMF"
     echo "7) MITMF + BeeF"
-    echo "8) Resultado de la captura"
-    echo "9) Ver captura completa"
+    echo "8) Delorean"
+    echo "9) Resultado de la captura"
+    echo "10) Ver captura completa"
     echo
-    echo "10) Instalar Nmap"
-    echo "11) Instalar MITMF (Repositorios)"
-    echo "12) Instalar MITMF (Github [Recomendado])"
+    echo "11) Instalar Nmap"
+    echo "12) Instalar MITMF (Repositorios)"
+    echo "13) Instalar MITMF (Github [Recomendado])"
+    echo "14) Instalar Delorean (Github)"
     echo
-    echo "13) Salir"
+    echo "15) Salir"
     echo 
     echo -n "Indica una opcion: "
 }
 
 opc="0"
 
-until [ "$opc" -eq "13" ];
+until [ "$opc" -eq "15" ];
 
 do
     case $opc in
@@ -178,7 +180,8 @@ do
          6)
             clear
 	    _logo
-            gnome-terminal -e ./sniff-gathe.sh 
+            cd /root
+            gnome-terminal -e ./sniff-gathe
             tput setaf 1;
             echo
             echo 
@@ -196,7 +199,9 @@ do
          7)
             clear
 	    _logo
+            cd /root
             tput setaf 1;
+            gnome-terminal -e ./sniff-gathe
             echo
             echo 
             echo "MITMF attack + BeeF"
@@ -209,7 +214,27 @@ do
             clear
             _menu
             ;;
+
           8)
+            clear
+	    _logo
+            cd /root
+            gnome-terminal -e ./sniff-gathe
+            tput setaf 1;
+            echo
+            echo 
+            echo "Delorean"
+            echo
+	    tput setaf 2;
+            echo "Saltando en el tiempo... "
+            cd /root/Delorean #entramos en la carpeta donde se encuentra el programa (cambiar si esta en otra ruta)      
+            ./delorean.py
+            pause
+            clear
+            _menu
+            ;;
+
+          9)
 
             clear
 	    _logo
@@ -229,7 +254,7 @@ do
             _menu
             ;;
 
-	  9)
+	  10)
 	    clear
 	    _logo
 	    echo
@@ -243,7 +268,7 @@ do
 	    _menu
 	    ;;
 
-	  10)
+	  11)
 	    clear
 	    _logo
 	    tput setaf 2;
@@ -256,7 +281,7 @@ do
             _menu
             ;;
 
-          11)
+          12)
             clear
 	    _logo
 	    tput setaf 2;
@@ -269,7 +294,7 @@ do
             _menu
             ;;
 
-          12)
+          13)
             clear
 	    _logo
 	    tput setaf 2;
@@ -296,6 +321,23 @@ do
             _menu
             ;;
 
+          14) 
+            clear 
+            _logo 
+            tput setaf 2;
+            echo
+            echo "Instalar Delorean desde Github (Para que funcione la opcion 8, se tiene que instalar en la carpeta /root o desde el source se puede modificar la ruta!!"
+            pause
+            echo "CLONAR DESDE GITHUB"
+            pause
+            cd /root
+            git clone https://github.com/PentesterES/Delorean.git
+            
+            pause
+            clear
+            _menu
+            ;;
+   
         *)
             # Esta opcion se ejecuta si no es ninguna de las anteriores
             clear
