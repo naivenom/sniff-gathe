@@ -181,7 +181,7 @@ do
             clear
 	    _logo
             cd /root
-            gnome-terminal -e ./sniff-gathe
+            gnome-terminal -e ./sniff-gathe.sh
             tput setaf 1;
             echo
             echo 
@@ -201,7 +201,7 @@ do
 	    _logo
             cd /root
             tput setaf 1;
-            gnome-terminal -e ./sniff-gathe
+            gnome-terminal -e ./sniff-gathe.sh
             echo
             echo 
             echo "MITMF attack + BeeF"
@@ -219,7 +219,7 @@ do
             clear
 	    _logo
             cd /root
-            gnome-terminal -e ./sniff-gathe
+            gnome-terminal -e ./sniff-gathe.sh
             tput setaf 1;
             echo
             echo 
