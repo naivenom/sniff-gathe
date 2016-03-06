@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 
 
-'''S N I F F - G A T H E      in Python
+'''S N I F F - G A T H E      by VASCO
 
 Es un script ideado por Naivenom escrito en shell script y más tarde programado en python por Vasco, para automatizar las herramientas de escaneo como Nmap y Man in the Middle como MITMF.
 El objetivo de la herramienta es el uso en una red LAN. A traves de una IP privada, donde no sabemos nada sobre ese host,
@@ -23,7 +23,7 @@ interface = ""
 def logo():  # LOGO
     print chr(27) + "[1;31m" + "\n                   /\                    " + chr(27) + "[0m"
     print chr(27) + "[1;31m" + " ___/\____________/  \____________/\____ " + chr(27) + "[0m"
-    print chr(27) + "[1;32m" + "   SNIFF-GATHE             by VASCO   " + chr(27) + "[0m"
+    print chr(27) + "[1;32m" + "   SNIFF-GATHE             by NAIVENOM   " + chr(27) + "[0m"
     print chr(27) + "[0;33m" + " ::::::::::::::::::::::::::::::::::::::  \n" + chr(27) + "[0m"
 
 
