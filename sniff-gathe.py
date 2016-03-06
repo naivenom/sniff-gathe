@@ -23,7 +23,7 @@ interface = ""
 def logo():  # LOGO
     print chr(27) + "[1;31m" + "\n                   /\                    " + chr(27) + "[0m"
     print chr(27) + "[1;31m" + " ___/\____________/  \____________/\____ " + chr(27) + "[0m"
-    print chr(27) + "[1;32m" + "   SNIFF-GATHE             by VASCO & NAIVENOM   " + chr(27) + "[0m"
+    print chr(27) + "[1;32m" + "   SNIFF-GATHE             by VASCO   " + chr(27) + "[0m"
     print chr(27) + "[0;33m" + " ::::::::::::::::::::::::::::::::::::::  \n" + chr(27) + "[0m"
 
 
