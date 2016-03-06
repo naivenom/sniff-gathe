@@ -2,9 +2,9 @@
 # -*- encoding: utf-8 -*-
 
 
-'''S N I F F - G A T H E      by  N A I V E N O M
+'''S N I F F - G A T H E      in Python
 
-Es un script para automatizar las herramientas de escaneo como Nmap y Man in the Middle como MITMF.
+Es un script ideado por Naivenom y programado en python por Vasco, para automatizar las herramientas de escaneo como Nmap y Man in the Middle como MITMF.
 El objetivo de la herramienta es el uso en una red LAN. A traves de una IP privada, donde no sabemos nada sobre ese host,
 poder sacar su correo electronico, usuarios y contraseñas de sitios web.
 Primero escaneamos la red con nmap, luego seleccionamos la IP donde se quiere esnifar el trafico y el gateway de la red (router).
@@ -23,7 +23,7 @@ interface = ""
 def logo():  # LOGO
     print chr(27) + "[1;31m" + "\n                   /\                    " + chr(27) + "[0m"
     print chr(27) + "[1;31m" + " ___/\____________/  \____________/\____ " + chr(27) + "[0m"
-    print chr(27) + "[1;32m" + "   SNIFF-GATHE             by NAIVENOM   " + chr(27) + "[0m"
+    print chr(27) + "[1;32m" + "   SNIFF-GATHE             by VASCO & NAIVENOM   " + chr(27) + "[0m"
     print chr(27) + "[0;33m" + " ::::::::::::::::::::::::::::::::::::::  \n" + chr(27) + "[0m"
 
 
