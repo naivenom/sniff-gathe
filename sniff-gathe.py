@@ -4,7 +4,7 @@
 
 '''S N I F F - G A T H E     
 
-Es un script ideado por Naivenom escrito en shell script y más tarde programado en python por Vasco, para automatizar las herramientas de escaneo como Nmap y Man in the Middle como MITMF.
+Es un script ideado por Naivenom escrito en shell script y más tarde programado en python, para automatizar las herramientas de escaneo como Nmap y Man in the Middle como MITMF.
 El objetivo de la herramienta es el uso en una red LAN. A traves de una IP privada, donde no sabemos nada sobre ese host,
 poder sacar su correo electronico, usuarios y contraseñas de sitios web.
 Primero escaneamos la red con nmap, luego seleccionamos la IP donde se quiere esnifar el trafico y el gateway de la red (router).
