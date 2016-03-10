@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 
 
-'''S N I F F - G A T H E      by VASCO
+'''S N I F F - G A T H E     
 
 Es un script ideado por Naivenom escrito en shell script y más tarde programado en python por Vasco, para automatizar las herramientas de escaneo como Nmap y Man in the Middle como MITMF.
 El objetivo de la herramienta es el uso en una red LAN. A traves de una IP privada, donde no sabemos nada sobre ese host,
